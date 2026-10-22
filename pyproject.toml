@@ -1,0 +1,37 @@
+[project]
+name = "sql-assist-mcp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "viveka555", email = "viveksurale777@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "asyncpg>=0.32.0",
+    "fastapi>=0.159.1",
+    "httpx>=0.28.1",
+    "langchain-core>=1.6.13",
+    "langchain-groq>=1.1.3",
+    "langchain-openai>=1.7.2",
+    "langgraph>=1.2.16",
+    "mcp[cli]>=2.3.0",
+    "pydantic-settings>=2.16.1",
+    "python-dotenv>=1.2.4",
+    "sqlalchemy>=2.1.6",
+    "sqlglot>=30.24.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+sql-assist-mcp = "sql_assist_mcp:main"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+]
